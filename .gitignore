@@ -1,15 +1,14 @@
 # Python
 __pycache__/
 *.py[cod]
-*.class
+*$py.class
 *.so
 .Python
-env/
 venv/
 ENV/
-env.bak/
+env/
 venv.bak/
-py2/
+py2
 
 # Django
 *.log
@@ -19,9 +18,8 @@ db.sqlite3-journal
 media/
 staticfiles/
 
-# Database
-*.sql
-*.sqlite3
+# Environment variables
+.env
 
 # IDE
 .vscode/
@@ -38,3 +36,7 @@ Thumbs.db
 *.bak
 *.pid
 *.pot
+mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
