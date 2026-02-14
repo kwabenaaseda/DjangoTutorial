@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# build.sh
+
+# Exit on error
+set -o errexit
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run migrations
+python manage.py migrate
+
+# Collect static files
+python manage.py collectstatic --no-input
+
+# Load initial data (if you want to seed on every deploy)
+# python manage.py loaddata genre_data.json
